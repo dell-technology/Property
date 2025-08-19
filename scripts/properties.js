@@ -13,6 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
       sqft: "2,500",
       image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       status: "For Sale",
+      isNewLaunch: true,
+      isReadyToMove: false,
+      isPremium: true,
       description: "Beautiful 4-bedroom villa with ocean views, modern amenities, and private pool."
     },
     {
@@ -26,6 +29,9 @@ document.addEventListener('DOMContentLoaded', function() {
       sqft: "1,800",
       image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       status: "For Rent",
+      isNewLaunch: false,
+      isReadyToMove: true,
+      isPremium: true,
       description: "Stunning penthouse with city views, luxury finishes, and prime downtown location."
     },
     {
@@ -39,6 +45,9 @@ document.addEventListener('DOMContentLoaded', function() {
       sqft: "3,200",
       image: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       status: "For Sale",
+      isNewLaunch: true,
+      isReadyToMove: false,
+      isPremium: false,
       description: "Spacious family home in quiet neighborhood with large backyard and garage."
     },
     {
@@ -52,6 +61,9 @@ document.addEventListener('DOMContentLoaded', function() {
       sqft: "1,200",
       image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       status: "For Sale",
+      isNewLaunch: false,
+      isReadyToMove: true,
+      isPremium: true,
       description: "Contemporary condo with modern finishes and great amenities."
     },
     {
@@ -65,6 +77,9 @@ document.addEventListener('DOMContentLoaded', function() {
       sqft: "2,100",
       image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       status: "For Sale",
+      isNewLaunch: true,
+      isReadyToMove: false,
+      isPremium: false,
       description: "Elegant townhouse with premium finishes and private patio."
     },
     {
@@ -78,6 +93,9 @@ document.addEventListener('DOMContentLoaded', function() {
       sqft: "600",
       image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       status: "For Rent",
+      isNewLaunch: true,
+      isReadyToMove: false,
+      isPremium: true,
       description: "Cozy studio in prime location with modern amenities."
     },
     {
@@ -166,6 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     return `
       <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300" data-id="property-card-${property.id}">
+        ${property.isNewLaunch ? '<div class="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">NEW LAUNCH</div>' : ''}
         <div class="relative" data-id="property-image-${property.id}">
           <img src="${property.image}" alt="${property.title}" class="w-full h-64 object-cover">
           <div class="absolute top-4 left-4 ${statusColor} text-white px-3 py-1 rounded-full text-sm font-semibold" data-id="property-status-${property.id}">
@@ -354,7 +373,62 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // Quick filter buttons
+  function initQuickFilters() {
+    const quickFilterButtons = document.querySelectorAll('[data-id^="filter-"]');
+    
+    quickFilterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Reset all button states
+        quickFilterButtons.forEach(btn => {
+          btn.classList.remove('bg-blue-600', 'text-white');
+          btn.classList.add('bg-white', 'text-gray-700');
+        });
+        
+        // Activate clicked button
+        button.classList.remove('bg-white', 'text-gray-700');
+        button.classList.add('bg-blue-600', 'text-white');
+        
+        // Apply filter
+        const filterId = button.getAttribute('data-id');
+        applyQuickFilter(filterId);
+      });
+    });
+  }
+  
+  function applyQuickFilter(filterId) {
+    let currentFilteredProperties = [...properties]; // Start with all properties for quick filters
+    
+    switch(filterId) {
+      case 'filter-new-launch':
+        currentFilteredProperties = properties.filter(p => p.isNewLaunch);
+        break;
+      case 'filter-ready-move':
+        currentFilteredProperties = properties.filter(p => p.isReadyToMove);
+        break;
+      case 'filter-premium':
+        currentFilteredProperties = properties.filter(p => p.isPremium);
+        break;
+      case 'filter-luxury':
+        currentFilteredProperties = properties.filter(p => parseInt(p.price.replace(/[$,]/g, '')) > 500000); // Assuming prices are in USD and > $500k is luxury
+        break;
+      case 'filter-affordable':
+        currentFilteredProperties = properties.filter(p => parseInt(p.price.replace(/[$,]/g, '')) < 300000); // Assuming prices are in USD and < $300k is affordable
+        break;
+      default:
+        // If no specific quick filter, revert to the main filter logic or show all
+        filterProperties(); // Re-apply main filters if no quick filter is active
+        return; // Exit to prevent double display
+    }
+    
+    filteredProperties = currentFilteredProperties; // Update the global filteredProperties
+    currentPage = 0; // Reset pagination
+    displayProperties();
+    updateResultsCount();
+  }
+
   // Initialize page
   loadURLFilters();
   filterProperties();
+  initQuickFilters();
 });

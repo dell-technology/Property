@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Details - Elite Properties</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/yjp3aho.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sofia': ['sofia-pro', 'sans-serif'],
+          },
+          colors: {
+            'primary': '#1a365d',
+            'secondary': '#2c5aa0',
+            'accent': '#e2e8f0',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sofia bg-gray-50">
+  <!-- Navigation -->
+  <div id="navbar-container" data-source="components/navbar.html"></div>
+
+  <!-- Property Header -->
+  <section class="bg-white shadow-sm" data-id="property-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div data-id="property-basic-info">
+          <nav class="text-sm text-gray-500 mb-2" data-id="breadcrumb">
+            <a href="index.html" class="hover:text-primary">Home</a>
+            <span class="mx-2">/</span>
+            <a href="properties.html" class="hover:text-primary">Properties</a>
+            <span class="mx-2">/</span>
+            <span class="text-gray-800" data-id="breadcrumb-current">Property Details</span>
+          </nav>
+          <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2" data-id="property-title">Loading...</h1>
+          <p class="text-lg text-gray-600 flex items-center gap-2" data-id="property-location">
+            <i data-lucide="map-pin" class="w-5 h-5"></i>
+            <span>Loading...</span>
+          </p>
+        </div>
+        <div class="flex flex-col items-end gap-2" data-id="property-price-section">
+          <div class="text-3xl md:text-4xl font-bold text-primary" data-id="property-price">Loading...</div>
+          <div class="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold" data-id="property-status">Loading...</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Property Gallery -->
+  <section class="py-8" data-id="gallery-section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 h-96 md:h-[500px]" data-id="gallery-grid">
+        <!-- Main image -->
+        <div class="md:col-span-2 md:row-span-2" data-id="main-image-container">
+          <img src="" alt="Main property image" class="w-full h-full object-cover rounded-xl shadow-lg cursor-pointer" data-id="main-image">
+        </div>
+        <!-- Thumbnail images -->
+        <div class="hidden md:block" data-id="thumb-1-container">
+          <img src="" alt="Property image" class="w-full h-full object-cover rounded-xl shadow-lg cursor-pointer hover:opacity-75 transition-opacity" data-id="thumb-1">
+        </div>
+        <div class="hidden md:block" data-id="thumb-2-container">
+          <img src="" alt="Property image" class="w-full h-full object-cover rounded-xl shadow-lg cursor-pointer hover:opacity-75 transition-opacity" data-id="thumb-2">
+        </div>
+        <div class="hidden md:block" data-id="thumb-3-container">
+          <img src="" alt="Property image" class="w-full h-full object-cover rounded-xl shadow-lg cursor-pointer hover:opacity-75 transition-opacity" data-id="thumb-3">
+        </div>
+        <div class="hidden md:block relative" data-id="thumb-4-container">
+          <img src="" alt="Property image" class="w-full h-full object-cover rounded-xl shadow-lg cursor-pointer" data-id="thumb-4">
+          <div class="absolute inset-0 bg-black bg-opacity-50 rounded-xl flex items-center justify-center cursor-pointer hover:bg-opacity-40 transition-opacity" data-id="view-all-overlay">
+            <div class="text-white text-center" data-id="view-all-text">
+              <i data-lucide="image" class="w-8 h-8 mx-auto mb-2"></i>
+              <span class="text-sm font-semibold">View All Photos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Property Details -->
+  <section class="py-8" data-id="details-section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Main Content -->
+        <div class="lg:col-span-2 space-y-8" data-id="main-content">
+          
+          <!-- Key Features -->
+          <div class="bg-white rounded-xl shadow-lg p-8" data-id="features-card">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6" data-id="features-title">Property Features</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6" data-id="features-grid">
+              <div class="text-center" data-id="feature-beds">
+                <div class="bg-gray-100 p-4 rounded-lg mb-2" data-id="beds-icon-container">
+                  <i data-lucide="bed" class="w-6 h-6 mx-auto text-primary"></i>
+                </div>
+                <div class="text-2xl font-bold text-gray-800" data-id="beds-count">-</div>
+                <div class="text-sm text-gray-600" data-id="beds-label">Bedrooms</div>
+              </div>
+              <div class="text-center" data-id="feature-baths">
+                <div class="bg-gray-100 p-4 rounded-lg mb-2" data-id="baths-icon-container">
+                  <i data-lucide="bath" class="w-6 h-6 mx-auto text-primary"></i>
+                </div>
+                <div class="text-2xl font-bold text-gray-800" data-id="baths-count">-</div>
+                <div class="text-sm text-gray-600" data-id="baths-label">Bathrooms</div>
+              </div>
+              <div class="text-center" data-id="feature-sqft">
+                <div class="bg-gray-100 p-4 rounded-lg mb-2" data-id="sqft-icon-container">
+                  <i data-lucide="maximize" class="w-6 h-6 mx-auto text-primary"></i>
+                </div>
+                <div class="text-2xl font-bold text-gray-800" data-id="sqft-count">-</div>
+                <div class="text-sm text-gray-600" data-id="sqft-label">Square Feet</div>
+              </div>
+              <div class="text-center" data-id="feature-year">
+                <div class="bg-gray-100 p-4 rounded-lg mb-2" data-id="year-icon-container">
+                  <i data-lucide="calendar" class="w-6 h-6 mx-auto text-primary"></i>
+                </div>
+                <div class="text-2xl font-bold text-gray-800" data-id="year-built">-</div>
+                <div class="text-sm text-gray-600" data-id="year-label">Year Built</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div class="bg-white rounded-xl shadow-lg p-8" data-id="description-card">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6" data-id="description-title">About This Property</h2>
+            <div class="prose prose-lg text-gray-600" data-id="property-description">
+              Loading property description...
+            </div>
+          </div>
+
+          <!-- Additional Features -->
+          <div class="bg-white rounded-xl shadow-lg p-8" data-id="amenities-card">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6" data-id="amenities-title">Amenities & Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-id="amenities-grid">
+              <div data-id="amenities-col-1">
+                <h3 class="font-semibold text-gray-800 mb-3" data-id="interior-title">Interior</h3>
+                <ul class="space-y-2" data-id="interior-list">
+                  <li class="flex items-center gap-2 text-gray-600" data-id="interior-1">
+                    <i data-lucide="check" class="w-4 h-4 text-green-500"></i>
+                    Hardwood Floors
+                  </li>
+                  <li class="flex items-center gap-2 text-gray-600" data-id="interior-2">
+                    <i data-lucide="check" class="w-4 h-4 text-green-500"></i>
+                    Updated Kitchen
+                  </li>
+                  <li class="flex items-center gap-2 text-gray-600" data-id="interior-3">
+                    <i data-lucide="check" class="w-4 h-4 text-green-500"></i>
+                    Fireplace
+                  </li>
+                  <li class="flex items-center gap-2 text-gray-600" data-id="interior-4">
+                    <i data-lucide="check" class="w-4 h-4 text-green-500"></i>
+                    Central Air/Heat
+                  </li>
+                </ul>
+              </div>
+              <div data-id="amenities-col-2">
+                <h3 class="font-semibold text-gray-800 mb-3" data-id="exterior-title">Exterior</h3>
+                <ul class="space-y-2" data-id="exterior-list">
+                  <li class="flex items-center gap-2 text-gray-600" data-id="exterior-1">
+                    <i data-lucide="check" class="w-4 h-4 text-green-500"></i>
+                    Private Patio
+                  </li>
+                  <li class="flex items-center gap-2 text-gray-600" data-id="exterior-2">
+                    <i data-lucide="check" class="w-4 h-4 text-green-500"></i>
+                    Two-Car Garage
+                  </li>
+                  <li class="flex items-center gap-2 text-gray-600" data-id="exterior-3">
+                    <i data-lucide="check" class="w-4 h-4 text-green-500"></i>
+                    Landscaped Yard
+                  </li>
+                  <li class="flex items-center gap-2 text-gray-600" data-id="exterior-4">
+                    <i data-lucide="check" class="w-4 h-4 text-green-500"></i>
+                    Security System
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="lg:col-span-1 space-y-6" data-id="sidebar">
+          
+          <!-- Contact Agent -->
+          <div class="bg-white rounded-xl shadow-lg p-6 sticky top-4" data-id="contact-agent-card">
+            <div class="text-center mb-6" data-id="agent-info">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                   alt="Agent" 
+                   class="w-20 h-20 rounded-full object-cover mx-auto mb-4" 
+                   data-id="agent-photo">
+              <h3 class="text-xl font-bold text-gray-800" data-id="agent-name">Sarah Johnson</h3>
+              <p class="text-gray-600" data-id="agent-title">Senior Real Estate Agent</p>
+              <div class="flex items-center justify-center gap-1 text-yellow-400 mt-2" data-id="agent-rating">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <span class="text-gray-600 text-sm ml-1">(127 reviews)</span>
+              </div>
+            </div>
+
+            <div class="space-y-4" data-id="contact-buttons">
+              <button class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center gap-2" data-id="call-agent-btn">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+                Call Agent
+              </button>
+              <button class="w-full border-2 border-primary text-primary py-3 rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors flex items-center justify-center gap-2" data-id="message-agent-btn">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                Send Message
+              </button>
+            </div>
+
+            <!-- Quick Contact Form -->
+            <div class="mt-6 border-t pt-6" data-id="quick-contact-form">
+              <h4 class="font-semibold text-gray-800 mb-4" data-id="quick-contact-title">Quick Inquiry</h4>
+              <form class="space-y-4" data-id="inquiry-form">
+                <input type="text" placeholder="Your Name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" data-id="inquiry-name">
+                <input type="email" placeholder="Your Email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" data-id="inquiry-email">
+                <input type="tel" placeholder="Your Phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" data-id="inquiry-phone">
+                <textarea rows="3" placeholder="I'm interested in this property..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent resize-none" data-id="inquiry-message"></textarea>
+                <button type="submit" class="w-full bg-gray-800 text-white py-2 rounded-lg font-semibold hover:bg-gray-700 transition-colors" data-id="inquiry-submit">
+                  Send Inquiry
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Property Actions -->
+          <div class="bg-white rounded-xl shadow-lg p-6" data-id="property-actions-card">
+            <h3 class="font-bold text-gray-800 mb-4" data-id="actions-title">Property Actions</h3>
+            <div class="space-y-3" data-id="actions-list">
+              <button class="w-full flex items-center justify-between px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors" data-id="save-property-btn">
+                <span class="flex items-center gap-2">
+                  <i data-lucide="heart" class="w-5 h-5"></i>
+                  Save Property
+                </span>
+                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+              </button>
+              <button class="w-full flex items-center justify-between px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors" data-id="share-property-btn">
+                <span class="flex items-center gap-2">
+                  <i data-lucide="share-2" class="w-5 h-5"></i>
+                  Share Property
+                </span>
+                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+              </button>
+              <button class="w-full flex items-center justify-between px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors" data-id="schedule-tour-btn">
+                <span class="flex items-center gap-2">
+                  <i data-lucide="calendar" class="w-5 h-5"></i>
+                  Schedule Tour
+                </span>
+                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Similar Properties -->
+  <section class="py-16 bg-gray-50" data-id="similar-properties-section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center" data-id="similar-title">Similar Properties</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-id="similar-grid" id="similar-properties">
+        <!-- Similar property cards will be loaded here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container" data-source="components/footer.html"></div>
+
+  <!-- Badge -->
+  <div id="badge-container" data-source="components/badge.html"></div>
+
+  <script type="module">
+    import { loadComponent } from './scripts/components/loader.js';
+    
+    // Load all shared components
+    loadComponent('#navbar-container');
+    loadComponent('#footer-container');
+    loadComponent('#badge-container');
+    
+    // Initialize icons after components are loaded
+    setTimeout(() => {
+      lucide.createIcons();
+    }, 100);
+  </script>
+
+  <script type="module" src="scripts/property-detail.js"></script>
+</body>
+</html>

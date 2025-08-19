@@ -111,6 +111,77 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('[data-id^="property-card-"], [data-id^="feature-"]').forEach(card => {
     observer.observe(card);
   });
+
+  // Enhanced poster interactions
+  function initPosterInteractions() {
+    const posters = document.querySelectorAll('[data-id="grand-launch-poster"], [data-id="limited-offer-poster"]');
+    
+    posters.forEach(poster => {
+      poster.addEventListener('mouseenter', () => {
+        const badge = poster.querySelector('[data-id$="-badge"]');
+        if (badge) {
+          badge.style.animation = 'pulse 1s infinite';
+        }
+      });
+
+      poster.addEventListener('mouseleave', () => {
+        const badge = poster.querySelector('[data-id$="-badge"]');
+        if (badge) {
+          badge.style.animation = '';
+        }
+      });
+    });
+
+    // Add click handlers for CTA buttons
+    const ctaButtons = document.querySelectorAll('[data-id$="-cta"]');
+    ctaButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Scroll to contact section or open inquiry modal
+        const contactSection = document.querySelector('[data-id="contact-section"]') || document.querySelector('footer');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  }
+
+  // Animate statistics counter
+  function animateCounters() {
+    const counters = document.querySelectorAll('[data-id$="-number"]');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const target = parseInt(counter.textContent);
+          let current = 0;
+          const increment = target / 50;
+          
+          const updateCounter = () => {
+            if (current < target) {
+              current += increment;
+              counter.textContent = Math.floor(current) + '+';
+              requestAnimationFrame(updateCounter);
+            } else {
+              counter.textContent = target + '+';
+            }
+          };
+          
+          updateCounter();
+          observer.unobserve(counter);
+        }
+      });
+    });
+    
+    counters.forEach(counter => observer.observe(counter));
+  }
+  
+  // Initialize everything
+  initHero();
+  initPropertyCards();
+  initSearch();
+  initPosterInteractions();
+  animateCounters();
 });
 
 // Add CSS animation class
