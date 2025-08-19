@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Elite Properties</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/yjp3aho.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sofia': ['sofia-pro', 'sans-serif'],
+          },
+          colors: {
+            'primary': '#1a365d',
+            'secondary': '#2c5aa0',
+            'accent': '#e2e8f0',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sofia bg-gray-50">
+  <!-- Navigation -->
+  <div id="navbar-container" data-source="components/navbar.html"></div>
+
+  <!-- Page Header -->
+  <section class="bg-primary text-white py-16" data-id="page-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4" data-id="page-title">About Elite Properties</h1>
+        <p class="text-xl opacity-90 max-w-2xl mx-auto" data-id="page-subtitle">
+          Your trusted partner in finding the perfect home with over a decade of excellence in real estate
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <section class="py-16 bg-white" data-id="about-content-section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Text Content -->
+        <div data-id="about-text">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6" data-id="about-title">
+            Building Dreams, Creating Homes
+          </h2>
+          <p class="text-lg text-gray-600 mb-6" data-id="about-paragraph-1">
+            Since 2010, Elite Properties has been at the forefront of the real estate industry, helping thousands of families and individuals find their perfect home. We believe that finding the right property is more than just a transaction—it's about discovering a place where memories are made and dreams come true.
+          </p>
+          <p class="text-lg text-gray-600 mb-6" data-id="about-paragraph-2">
+            Our team of experienced professionals combines local market expertise with innovative technology to provide an unparalleled real estate experience. Whether you're buying your first home, selling a cherished property, or investing in your future, we're here to guide you every step of the way.
+          </p>
+          <p class="text-lg text-gray-600 mb-8" data-id="about-paragraph-3">
+            We pride ourselves on our integrity, transparency, and commitment to excellence. Our success is measured not just by transactions closed, but by the lasting relationships we build with our clients and the communities we serve.
+          </p>
+          <a href="contact.html" class="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors" data-id="contact-cta">
+            Get In Touch
+            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+          </a>
+        </div>
+
+        <!-- Image -->
+        <div class="relative" data-id="about-image-container">
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+               alt="Modern office building" 
+               class="w-full h-96 object-cover rounded-xl shadow-lg" 
+               data-id="about-image">
+          <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent rounded-xl" data-id="image-overlay"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-16 bg-gray-50" data-id="stats-section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12" data-id="stats-header">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-id="stats-title">Our Track Record</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-id="stats-subtitle">
+          Numbers that reflect our commitment to excellence and client satisfaction
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8" data-id="stats-grid">
+        <!-- Stat 1 -->
+        <div class="text-center" data-id="stat-1">
+          <div class="bg-primary text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4" data-id="stat-icon-1">
+            <i data-lucide="home" class="w-10 h-10"></i>
+          </div>
+          <div class="text-3xl font-bold text-gray-800 mb-2" data-id="stat-number-1">2,500+</div>
+          <div class="text-gray-600 font-medium" data-id="stat-label-1">Properties Sold</div>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="text-center" data-id="stat-2">
+          <div class="bg-primary text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4" data-id="stat-icon-2">
+            <i data-lucide="users" class="w-10 h-10"></i>
+          </div>
+          <div class="text-3xl font-bold text-gray-800 mb-2" data-id="stat-number-2">5,000+</div>
+          <div class="text-gray-600 font-medium" data-id="stat-label-2">Happy Clients</div>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="text-center" data-id="stat-3">
+          <div class="bg-primary text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4" data-id="stat-icon-3">
+            <i data-lucide="calendar" class="w-10 h-10"></i>
+          </div>
+          <div class="text-3xl font-bold text-gray-800 mb-2" data-id="stat-number-3">14</div>
+          <div class="text-gray-600 font-medium" data-id="stat-label-3">Years Experience</div>
+        </div>
+
+        <!-- Stat 4 -->
+        <div class="text-center" data-id="stat-4">
+          <div class="bg-primary text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4" data-id="stat-icon-4">
+            <i data-lucide="award" class="w-10 h-10"></i>
+          </div>
+          <div class="text-3xl font-bold text-gray-800 mb-2" data-id="stat-number-4">98%</div>
+          <div class="text-gray-600 font-medium" data-id="stat-label-4">Client Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-16 bg-white" data-id="team-section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12" data-id="team-header">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-id="team-title">Meet Our Team</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-id="team-subtitle">
+          Our experienced professionals are dedicated to providing exceptional service and expert guidance
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-id="team-grid">
+        <!-- Team Member 1 -->
+        <div class="text-center" data-id="team-member-1">
+          <div class="relative mb-6" data-id="member-image-1">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                 alt="Sarah Johnson" 
+                 class="w-48 h-48 rounded-full object-cover mx-auto shadow-lg">
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2" data-id="member-name-1">Sarah Johnson</h3>
+          <p class="text-primary font-medium mb-3" data-id="member-role-1">Founder & CEO</p>
+          <p class="text-gray-600 mb-4" data-id="member-bio-1">
+            With over 15 years in real estate, Sarah founded Elite Properties with a vision to revolutionize the home buying experience.
+          </p>
+          <div class="flex justify-center space-x-3" data-id="member-social-1">
+            <a href="#" class="text-gray-400 hover:text-primary transition-colors" data-id="member-linkedin-1">
+              <i data-lucide="linkedin" class="w-5 h-5"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-primary transition-colors" data-id="member-twitter-1">
+              <i data-lucide="twitter" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="text-center" data-id="team-member-2">
+          <div class="relative mb-6" data-id="member-image-2">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                 alt="Michael Chen" 
+                 class="w-48 h-48 rounded-full object-cover mx-auto shadow-lg">
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2" data-id="member-name-2">Michael Chen</h3>
+          <p class="text-primary font-medium mb-3" data-id="member-role-2">Senior Real Estate Agent</p>
+          <p class="text-gray-600 mb-4" data-id="member-bio-2">
+            Michael specializes in luxury properties and has helped hundreds of clients find their dream homes in premium locations.
+          </p>
+          <div class="flex justify-center space-x-3" data-id="member-social-2">
+            <a href="#" class="text-gray-400 hover:text-primary transition-colors" data-id="member-linkedin-2">
+              <i data-lucide="linkedin" class="w-5 h-5"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-primary transition-colors" data-id="member-twitter-2">
+              <i data-lucide="twitter" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="text-center" data-id="team-member-3">
+          <div class="relative mb-6" data-id="member-image-3">
+            <img src="https://images.unsplash.com/photo-1494790108755-2616c6bd9c1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                 alt="Emily Rodriguez" 
+                 class="w-48 h-48 rounded-full object-cover mx-auto shadow-lg">
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2" data-id="member-name-3">Emily Rodriguez</h3>
+          <p class="text-primary font-medium mb-3" data-id="member-role-3">Marketing Director</p>
+          <p class="text-gray-600 mb-4" data-id="member-bio-3">
+            Emily leads our marketing efforts, ensuring every property gets maximum exposure through innovative digital strategies.
+          </p>
+          <div class="flex justify-center space-x-3" data-id="member-social-3">
+            <a href="#" class="text-gray-400 hover:text-primary transition-colors" data-id="member-linkedin-3">
+              <i data-lucide="linkedin" class="w-5 h-5"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-primary transition-colors" data-id="member-twitter-3">
+              <i data-lucide="twitter" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="py-16 bg-gray-50" data-id="values-section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12" data-id="values-header">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-id="values-title">Our Core Values</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-id="values-subtitle">
+          The principles that guide everything we do
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-id="values-grid">
+        <!-- Value 1 -->
+        <div class="bg-white p-8 rounded-xl shadow-lg text-center" data-id="value-1">
+          <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" data-id="value-icon-1">
+            <i data-lucide="heart" class="w-8 h-8"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-4" data-id="value-title-1">Integrity First</h3>
+          <p class="text-gray-600" data-id="value-description-1">
+            We conduct every transaction with honesty, transparency, and ethical practices that build lasting trust with our clients.
+          </p>
+        </div>
+
+        <!-- Value 2 -->
+        <div class="bg-white p-8 rounded-xl shadow-lg text-center" data-id="value-2">
+          <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" data-id="value-icon-2">
+            <i data-lucide="target" class="w-8 h-8"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-4" data-id="value-title-2">Client-Focused</h3>
+          <p class="text-gray-600" data-id="value-description-2">
+            Your goals become our mission. We listen carefully and tailor our approach to meet your unique needs and aspirations.
+          </p>
+        </div>
+
+        <!-- Value 3 -->
+        <div class="bg-white p-8 rounded-xl shadow-lg text-center" data-id="value-3">
+          <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" data-id="value-icon-3">
+            <i data-lucide="trending-up" class="w-8 h-8"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-4" data-id="value-title-3">Excellence</h3>
+          <p class="text-gray-600" data-id="value-description-3">
+            We strive for excellence in everything we do, constantly improving our services and exceeding expectations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container" data-source="components/footer.html"></div>
+
+  <!-- Badge -->
+  <div id="badge-container" data-source="components/badge.html"></div>
+
+  <script type="module">
+    import { loadComponent } from './scripts/components/loader.js';
+    
+    // Load all shared components
+    loadComponent('#navbar-container');
+    loadComponent('#footer-container');
+    loadComponent('#badge-container');
+    
+    // Initialize icons after components are loaded
+    setTimeout(() => {
+      lucide.createIcons();
+    }, 100);
+  </script>
+
+  <script type="module" src="scripts/about.js"></script>
+</body>
+</html>

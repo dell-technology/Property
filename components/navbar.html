@@ -1,0 +1,45 @@
+<!-- navbar will be injected -->
+<nav class="bg-white shadow-lg sticky top-0 z-50" data-id="main-navbar">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+      <!-- Logo -->
+      <div class="flex-shrink-0" data-id="logo-container">
+        <a href="index.html" class="flex items-center space-x-2" data-id="logo-link">
+          <div class="bg-primary text-white w-10 h-10 rounded-lg flex items-center justify-center" data-id="logo-icon">
+            <i data-lucide="home" class="w-6 h-6"></i>
+          </div>
+          <span class="text-2xl font-bold text-primary" data-id="logo-text">Elite Properties</span>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:block" data-id="desktop-nav">
+        <div class="flex items-center space-x-8" data-id="nav-links">
+          <a href="index.html" class="text-gray-700 hover:text-primary font-medium transition-colors" data-id="nav-home">Home</a>
+          <a href="properties.html" class="text-gray-700 hover:text-primary font-medium transition-colors" data-id="nav-properties">Properties</a>
+          <a href="about.html" class="text-gray-700 hover:text-primary font-medium transition-colors" data-id="nav-about">About Us</a>
+          <a href="contact.html" class="text-gray-700 hover:text-primary font-medium transition-colors" data-id="nav-contact">Contact</a>
+          <a href="contact.html" class="bg-primary text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors" data-id="nav-cta">Get Started</a>
+        </div>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden" data-id="mobile-menu-button-container">
+        <button class="text-gray-700 hover:text-primary focus:outline-none focus:text-primary" data-id="mobile-menu-toggle">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="md:hidden hidden" data-id="mobile-nav">
+      <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200" data-id="mobile-nav-links">
+        <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-primary font-medium transition-colors" data-id="mobile-nav-home">Home</a>
+        <a href="properties.html" class="block px-3 py-2 text-gray-700 hover:text-primary font-medium transition-colors" data-id="mobile-nav-properties">Properties</a>
+        <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-primary font-medium transition-colors" data-id="mobile-nav-about">About Us</a>
+        <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-primary font-medium transition-colors" data-id="mobile-nav-contact">Contact</a>
+        <a href="contact.html" class="block mx-3 mt-4 bg-primary text-white px-4 py-2 rounded-lg font-medium text-center hover:bg-blue-700 transition-colors" data-id="mobile-nav-cta">Get Started</a>
+      </div>
+    </div>
+  </div>
+</nav>

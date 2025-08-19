@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elite Properties - Premium Real Estate</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/yjp3aho.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sofia': ['sofia-pro', 'sans-serif'],
+          },
+          colors: {
+            'primary': '#1a365d',
+            'secondary': '#2c5aa0',
+            'accent': '#e2e8f0',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sofia bg-gray-50">
+  <!-- Navigation -->
+  <div id="navbar-container" data-source="components/navbar.html"></div>
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-r from-primary to-secondary text-white overflow-hidden" data-id="hero-section">
+    <div class="absolute inset-0 bg-black opacity-20"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight" data-id="hero-title">
+          Find Your Dream Home
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90" data-id="hero-subtitle">
+          Discover premium properties in the most desirable locations with our expert guidance
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center" data-id="hero-cta-buttons">
+          <button class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg" data-id="browse-properties-btn">
+            Browse Properties
+          </button>
+          <button class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors" data-id="contact-us-btn">
+            Contact Us
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Background image overlay -->
+    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80')"></div>
+  </section>
+
+  <!-- Quick Search -->
+  <section class="bg-white shadow-lg -mt-12 relative z-20 mx-4 md:mx-8 lg:mx-16 rounded-xl" data-id="quick-search-section">
+    <div class="max-w-6xl mx-auto p-6 lg:p-8">
+      <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center" data-id="search-title">Find Your Perfect Property</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4" data-id="search-form">
+        <div class="space-y-2" data-id="location-field">
+          <label class="text-sm font-medium text-gray-700">Location</label>
+          <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" data-id="location-select">
+            <option>Select Location</option>
+            <option>New York</option>
+            <option>Los Angeles</option>
+            <option>Chicago</option>
+            <option>Miami</option>
+          </select>
+        </div>
+        <div class="space-y-2" data-id="property-type-field">
+          <label class="text-sm font-medium text-gray-700">Property Type</label>
+          <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" data-id="property-type-select">
+            <option>Any Type</option>
+            <option>House</option>
+            <option>Apartment</option>
+            <option>Condo</option>
+            <option>Villa</option>
+          </select>
+        </div>
+        <div class="space-y-2" data-id="price-field">
+          <label class="text-sm font-medium text-gray-700">Price Range</label>
+          <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" data-id="price-select">
+            <option>Any Price</option>
+            <option>$100k - $300k</option>
+            <option>$300k - $500k</option>
+            <option>$500k - $1M</option>
+            <option>$1M+</option>
+          </select>
+        </div>
+        <div class="flex items-end" data-id="search-button-container">
+          <button class="w-full bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center gap-2" data-id="search-properties-btn">
+            <i data-lucide="search" class="w-5 h-5"></i>
+            Search Properties
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Properties -->
+  <section class="py-16 bg-gray-50" data-id="featured-properties-section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12" data-id="featured-header">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-id="featured-title">Featured Properties</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-id="featured-subtitle">
+          Discover our handpicked selection of premium properties in prime locations
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-id="properties-grid">
+        <!-- Property Card 1 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300" data-id="property-card-1">
+          <div class="relative" data-id="property-image-1">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                 alt="Luxury Villa" class="w-full h-64 object-cover">
+            <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold" data-id="property-badge-1">
+              For Sale
+            </div>
+            <div class="absolute top-4 right-4 bg-white p-2 rounded-full hover:bg-gray-100 transition-colors cursor-pointer" data-id="favorite-btn-1">
+              <i data-lucide="heart" class="w-5 h-5 text-gray-600"></i>
+            </div>
+          </div>
+          <div class="p-6" data-id="property-content-1">
+            <div class="flex items-center justify-between mb-2" data-id="property-price-1">
+              <h3 class="text-2xl font-bold text-primary">$850,000</h3>
+              <span class="text-sm text-gray-500">Miami, FL</span>
+            </div>
+            <h4 class="text-lg font-semibold text-gray-800 mb-2" data-id="property-name-1">Modern Luxury Villa</h4>
+            <p class="text-gray-600 mb-4" data-id="property-description-1">
+              Beautiful 4-bedroom villa with ocean views, modern amenities, and private pool.
+            </p>
+            <div class="flex items-center justify-between text-sm text-gray-500 mb-4" data-id="property-features-1">
+              <span class="flex items-center gap-1"><i data-lucide="bed" class="w-4 h-4"></i> 4 Beds</span>
+              <span class="flex items-center gap-1"><i data-lucide="bath" class="w-4 h-4"></i> 3 Baths</span>
+              <span class="flex items-center gap-1"><i data-lucide="maximize" class="w-4 h-4"></i> 2,500 ft²</span>
+            </div>
+            <button class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors" data-id="view-details-btn-1">
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Property Card 2 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300" data-id="property-card-2">
+          <div class="relative" data-id="property-image-2">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                 alt="Downtown Apartment" class="w-full h-64 object-cover">
+            <div class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold" data-id="property-badge-2">
+              For Rent
+            </div>
+            <div class="absolute top-4 right-4 bg-white p-2 rounded-full hover:bg-gray-100 transition-colors cursor-pointer" data-id="favorite-btn-2">
+              <i data-lucide="heart" class="w-5 h-5 text-gray-600"></i>
+            </div>
+          </div>
+          <div class="p-6" data-id="property-content-2">
+            <div class="flex items-center justify-between mb-2" data-id="property-price-2">
+              <h3 class="text-2xl font-bold text-primary">$3,200/mo</h3>
+              <span class="text-sm text-gray-500">New York, NY</span>
+            </div>
+            <h4 class="text-lg font-semibold text-gray-800 mb-2" data-id="property-name-2">Downtown Penthouse</h4>
+            <p class="text-gray-600 mb-4" data-id="property-description-2">
+              Stunning penthouse with city views, luxury finishes, and prime downtown location.
+            </p>
+            <div class="flex items-center justify-between text-sm text-gray-500 mb-4" data-id="property-features-2">
+              <span class="flex items-center gap-1"><i data-lucide="bed" class="w-4 h-4"></i> 3 Beds</span>
+              <span class="flex items-center gap-1"><i data-lucide="bath" class="w-4 h-4"></i> 2 Baths</span>
+              <span class="flex items-center gap-1"><i data-lucide="maximize" class="w-4 h-4"></i> 1,800 ft²</span>
+            </div>
+            <button class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors" data-id="view-details-btn-2">
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Property Card 3 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300" data-id="property-card-3">
+          <div class="relative" data-id="property-image-3">
+            <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                 alt="Family Home" class="w-full h-64 object-cover">
+            <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold" data-id="property-badge-3">
+              For Sale
+            </div>
+            <div class="absolute top-4 right-4 bg-white p-2 rounded-full hover:bg-gray-100 transition-colors cursor-pointer" data-id="favorite-btn-3">
+              <i data-lucide="heart" class="w-5 h-5 text-gray-600"></i>
+            </div>
+          </div>
+          <div class="p-6" data-id="property-content-3">
+            <div class="flex items-center justify-between mb-2" data-id="property-price-3">
+              <h3 class="text-2xl font-bold text-primary">$425,000</h3>
+              <span class="text-sm text-gray-500">Chicago, IL</span>
+            </div>
+            <h4 class="text-lg font-semibold text-gray-800 mb-2" data-id="property-name-3">Suburban Family Home</h4>
+            <p class="text-gray-600 mb-4" data-id="property-description-3">
+              Spacious family home in quiet neighborhood with large backyard and garage.
+            </p>
+            <div class="flex items-center justify-between text-sm text-gray-500 mb-4" data-id="property-features-3">
+              <span class="flex items-center gap-1"><i data-lucide="bed" class="w-4 h-4"></i> 5 Beds</span>
+              <span class="flex items-center gap-1"><i data-lucide="bath" class="w-4 h-4"></i> 4 Baths</span>
+              <span class="flex items-center gap-1"><i data-lucide="maximize" class="w-4 h-4"></i> 3,200 ft²</span>
+            </div>
+            <button class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors" data-id="view-details-btn-3">
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12" data-id="view-all-container">
+        <a href="properties.html" class="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors" data-id="view-all-properties-btn">
+          View All Properties
+          <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-16 bg-white" data-id="why-choose-us-section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12" data-id="why-choose-header">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-id="why-choose-title">Why Choose Elite Properties</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-id="why-choose-subtitle">
+          With years of experience and a commitment to excellence, we make your real estate journey seamless
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-id="features-grid">
+        <!-- Feature 1 -->
+        <div class="text-center" data-id="feature-1">
+          <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" data-id="feature-icon-1">
+            <i data-lucide="award" class="w-8 h-8"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-4" data-id="feature-title-1">Expert Guidance</h3>
+          <p class="text-gray-600" data-id="feature-description-1">
+            Our experienced agents provide personalized guidance throughout your real estate journey, ensuring you make informed decisions.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="text-center" data-id="feature-2">
+          <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" data-id="feature-icon-2">
+            <i data-lucide="shield-check" class="w-8 h-8"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-4" data-id="feature-title-2">Trusted Service</h3>
+          <p class="text-gray-600" data-id="feature-description-2">
+            With thousands of satisfied clients and a proven track record, you can trust us to deliver exceptional results every time.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="text-center" data-id="feature-3">
+          <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" data-id="feature-icon-3">
+            <i data-lucide="clock" class="w-8 h-8"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-4" data-id="feature-title-3">Quick Response</h3>
+          <p class="text-gray-600" data-id="feature-description-3">
+            We understand time is valuable. Our team responds quickly to inquiries and keeps you updated throughout the process.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-primary text-white" data-id="cta-section">
+    <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6" data-id="cta-title">Ready to Find Your Dream Home?</h2>
+      <p class="text-xl mb-8 opacity-90" data-id="cta-subtitle">
+        Let our expert team help you discover the perfect property that matches your lifestyle and budget.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center" data-id="cta-buttons">
+        <a href="contact.html" class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors" data-id="get-started-btn">
+          Get Started Today
+        </a>
+        <a href="properties.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors" data-id="browse-listings-btn">
+          Browse Listings
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container" data-source="components/footer.html"></div>
+
+  <!-- Badge -->
+  <div id="badge-container" data-source="components/badge.html"></div>
+
+  <script type="module">
+    import { loadComponent } from './scripts/components/loader.js';
+    
+    // Load all shared components
+    loadComponent('#navbar-container');
+    loadComponent('#footer-container');
+    loadComponent('#badge-container');
+    
+    // Initialize icons after components are loaded
+    setTimeout(() => {
+      lucide.createIcons();
+    }, 100);
+  </script>
+
+  <script type="module" src="scripts/homepage.js"></script>
+</body>
+</html>

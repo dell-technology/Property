@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Properties - Elite Properties</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/yjp3aho.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sofia': ['sofia-pro', 'sans-serif'],
+          },
+          colors: {
+            'primary': '#1a365d',
+            'secondary': '#2c5aa0',
+            'accent': '#e2e8f0',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sofia bg-gray-50">
+  <!-- Navigation -->
+  <div id="navbar-container" data-source="components/navbar.html"></div>
+
+  <!-- Page Header -->
+  <section class="bg-primary text-white py-16" data-id="page-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4" data-id="page-title">Our Properties</h1>
+        <p class="text-xl opacity-90 max-w-2xl mx-auto" data-id="page-subtitle">
+          Discover premium properties in prime locations, carefully selected to match your lifestyle and budget
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filters Section -->
+  <section class="bg-white shadow-lg py-8" data-id="filters-section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-4" data-id="filters-container">
+        <!-- Location Filter -->
+        <div class="space-y-2" data-id="location-filter">
+          <label class="text-sm font-medium text-gray-700">Location</label>
+          <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" data-id="location-select">
+            <option value="">All Locations</option>
+            <option value="new-york">New York</option>
+            <option value="los-angeles">Los Angeles</option>
+            <option value="chicago">Chicago</option>
+            <option value="miami">Miami</option>
+          </select>
+        </div>
+
+        <!-- Property Type Filter -->
+        <div class="space-y-2" data-id="type-filter">
+          <label class="text-sm font-medium text-gray-700">Property Type</label>
+          <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" data-id="type-select">
+            <option value="">All Types</option>
+            <option value="house">House</option>
+            <option value="apartment">Apartment</option>
+            <option value="condo">Condo</option>
+            <option value="villa">Villa</option>
+          </select>
+        </div>
+
+        <!-- Price Range Filter -->
+        <div class="space-y-2" data-id="price-filter">
+          <label class="text-sm font-medium text-gray-700">Price Range</label>
+          <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" data-id="price-select">
+            <option value="">Any Price</option>
+            <option value="100-300">$100k - $300k</option>
+            <option value="300-500">$300k - $500k</option>
+            <option value="500-1000">$500k - $1M</option>
+            <option value="1000+">$1M+</option>
+          </select>
+        </div>
+
+        <!-- Bedrooms Filter -->
+        <div class="space-y-2" data-id="bedrooms-filter">
+          <label class="text-sm font-medium text-gray-700">Bedrooms</label>
+          <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" data-id="bedrooms-select">
+            <option value="">Any</option>
+            <option value="1">1+ Bed</option>
+            <option value="2">2+ Beds</option>
+            <option value="3">3+ Beds</option>
+            <option value="4">4+ Beds</option>
+          </select>
+        </div>
+
+        <!-- Search Button -->
+        <div class="flex items-end" data-id="search-container">
+          <button class="w-full bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center gap-2" data-id="search-btn">
+            <i data-lucide="search" class="w-5 h-5"></i>
+            Search
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Properties Grid -->
+  <section class="py-16" data-id="properties-grid-section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Results Header -->
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8" data-id="results-header">
+        <div data-id="results-info">
+          <h2 class="text-2xl font-bold text-gray-800 mb-2" data-id="results-title">Available Properties</h2>
+          <p class="text-gray-600" data-id="results-count">Showing 12 of 45 properties</p>
+        </div>
+        <div class="flex items-center gap-4 mt-4 md:mt-0" data-id="sort-container">
+          <label class="text-sm font-medium text-gray-700">Sort by:</label>
+          <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" data-id="sort-select">
+            <option value="newest">Newest First</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="size">Size</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Properties Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-id="properties-grid" id="properties-container">
+        <!-- Property cards will be dynamically loaded here -->
+      </div>
+
+      <!-- Load More Button -->
+      <div class="text-center mt-12" data-id="load-more-container">
+        <button class="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors" data-id="load-more-btn">
+          Load More Properties
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container" data-source="components/footer.html"></div>
+
+  <!-- Badge -->
+  <div id="badge-container" data-source="components/badge.html"></div>
+
+  <script type="module">
+    import { loadComponent } from './scripts/components/loader.js';
+    
+    // Load all shared components
+    loadComponent('#navbar-container');
+    loadComponent('#footer-container');
+    loadComponent('#badge-container');
+    
+    // Initialize icons after components are loaded
+    setTimeout(() => {
+      lucide.createIcons();
+    }, 100);
+  </script>
+
+  <script type="module" src="scripts/properties.js"></script>
+</body>
+</html>

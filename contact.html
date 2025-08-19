@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Elite Properties</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/yjp3aho.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sofia': ['sofia-pro', 'sans-serif'],
+          },
+          colors: {
+            'primary': '#1a365d',
+            'secondary': '#2c5aa0',
+            'accent': '#e2e8f0',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sofia bg-gray-50">
+  <!-- Navigation -->
+  <div id="navbar-container" data-source="components/navbar.html"></div>
+
+  <!-- Page Header -->
+  <section class="bg-primary text-white py-16" data-id="page-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4" data-id="page-title">Contact Us</h1>
+        <p class="text-xl opacity-90 max-w-2xl mx-auto" data-id="page-subtitle">
+          Ready to find your dream home? Get in touch with our expert team today
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form & Info -->
+  <section class="py-16" data-id="contact-section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Contact Information -->
+        <div class="lg:col-span-1" data-id="contact-info">
+          <h2 class="text-2xl font-bold text-gray-800 mb-8" data-id="contact-info-title">Get In Touch</h2>
+          
+          <div class="space-y-8" data-id="contact-methods">
+            <!-- Phone -->
+            <div class="flex items-start space-x-4" data-id="contact-phone">
+              <div class="bg-primary text-white p-3 rounded-lg" data-id="phone-icon">
+                <i data-lucide="phone" class="w-6 h-6"></i>
+              </div>
+              <div data-id="phone-info">
+                <h3 class="text-lg font-semibold text-gray-800 mb-1">Phone</h3>
+                <p class="text-gray-600">Call us for immediate assistance</p>
+                <a href="tel:+15551234567" class="text-primary font-medium hover:underline" data-id="phone-link">
+                  (555) 123-4567
+                </a>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="flex items-start space-x-4" data-id="contact-email">
+              <div class="bg-primary text-white p-3 rounded-lg" data-id="email-icon">
+                <i data-lucide="mail" class="w-6 h-6"></i>
+              </div>
+              <div data-id="email-info">
+                <h3 class="text-lg font-semibold text-gray-800 mb-1">Email</h3>
+                <p class="text-gray-600">Send us a detailed message</p>
+                <a href="mailto:info@eliteproperties.com" class="text-primary font-medium hover:underline" data-id="email-link">
+                  info@eliteproperties.com
+                </a>
+              </div>
+            </div>
+
+            <!-- Address -->
+            <div class="flex items-start space-x-4" data-id="contact-address">
+              <div class="bg-primary text-white p-3 rounded-lg" data-id="address-icon">
+                <i data-lucide="map-pin" class="w-6 h-6"></i>
+              </div>
+              <div data-id="address-info">
+                <h3 class="text-lg font-semibold text-gray-800 mb-1">Office</h3>
+                <p class="text-gray-600">Visit us during business hours</p>
+                <address class="text-gray-600 not-italic" data-id="address-text">
+                  123 Real Estate Ave<br>
+                  City, ST 12345
+                </address>
+              </div>
+            </div>
+
+            <!-- Hours -->
+            <div class="flex items-start space-x-4" data-id="contact-hours">
+              <div class="bg-primary text-white p-3 rounded-lg" data-id="hours-icon">
+                <i data-lucide="clock" class="w-6 h-6"></i>
+              </div>
+              <div data-id="hours-info">
+                <h3 class="text-lg font-semibold text-gray-800 mb-1">Business Hours</h3>
+                <div class="text-gray-600" data-id="hours-text">
+                  <p>Mon - Fri: 9:00 AM - 7:00 PM</p>
+                  <p>Sat - Sun: 10:00 AM - 5:00 PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Media -->
+          <div class="mt-8" data-id="social-section">
+            <h3 class="text-lg font-semibold text-gray-800 mb-4" data-id="social-title">Follow Us</h3>
+            <div class="flex space-x-4" data-id="social-links">
+              <a href="#" class="bg-gray-100 p-3 rounded-lg hover:bg-primary hover:text-white transition-colors" data-id="social-facebook">
+                <i data-lucide="facebook" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="bg-gray-100 p-3 rounded-lg hover:bg-primary hover:text-white transition-colors" data-id="social-twitter">
+                <i data-lucide="twitter" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="bg-gray-100 p-3 rounded-lg hover:bg-primary hover:text-white transition-colors" data-id="social-instagram">
+                <i data-lucide="instagram" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="bg-gray-100 p-3 rounded-lg hover:bg-primary hover:text-white transition-colors" data-id="social-linkedin">
+                <i data-lucide="linkedin" class="w-5 h-5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="lg:col-span-2" data-id="contact-form-container">
+          <div class="bg-white rounded-xl shadow-lg p-8" data-id="form-wrapper">
+            <h2 class="text-2xl font-bold text-gray-800 mb-8" data-id="form-title">Send Us a Message</h2>
+            
+            <form class="space-y-6" data-id="contact-form" id="contactForm">
+              <!-- Name Fields -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-id="name-fields">
+                <div data-id="first-name-field">
+                  <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                  <input type="text" 
+                         id="firstName" 
+                         name="firstName" 
+                         required 
+                         class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                         placeholder="Enter your first name"
+                         data-id="first-name-input">
+                </div>
+                <div data-id="last-name-field">
+                  <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                  <input type="text" 
+                         id="lastName" 
+                         name="lastName" 
+                         required 
+                         class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                         placeholder="Enter your last name"
+                         data-id="last-name-input">
+                </div>
+              </div>
+
+              <!-- Contact Fields -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-id="contact-fields">
+                <div data-id="email-field">
+                  <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                  <input type="email" 
+                         id="email" 
+                         name="email" 
+                         required 
+                         class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                         placeholder="your@email.com"
+                         data-id="email-input">
+                </div>
+                <div data-id="phone-field">
+                  <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                  <input type="tel" 
+                         id="phone" 
+                         name="phone" 
+                         class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                         placeholder="(555) 123-4567"
+                         data-id="phone-input">
+                </div>
+              </div>
+
+              <!-- Interest Type -->
+              <div data-id="interest-field">
+                <label for="interest" class="block text-sm font-medium text-gray-700 mb-2">I'm Interested In</label>
+                <select id="interest" 
+                        name="interest" 
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                        data-id="interest-select">
+                  <option value="">Select an option</option>
+                  <option value="buying">Buying a Property</option>
+                  <option value="selling">Selling a Property</option>
+                  <option value="renting">Renting a Property</option>
+                  <option value="investing">Investment Opportunities</option>
+                  <option value="consultation">Free Consultation</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <!-- Message -->
+              <div data-id="message-field">
+                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                <textarea id="message" 
+                          name="message" 
+                          rows="6" 
+                          required 
+                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors resize-none"
+                          placeholder="Tell us about your real estate needs..."
+                          data-id="message-textarea"></textarea>
+              </div>
+
+              <!-- Preferred Contact Method -->
+              <div data-id="contact-preference-field">
+                <label class="block text-sm font-medium text-gray-700 mb-3">Preferred Contact Method</label>
+                <div class="flex flex-wrap gap-4" data-id="contact-preferences">
+                  <label class="flex items-center" data-id="email-preference">
+                    <input type="radio" 
+                           name="contactMethod" 
+                           value="email" 
+                           class="text-primary focus:ring-primary border-gray-300"
+                           data-id="email-radio">
+                    <span class="ml-2 text-gray-700">Email</span>
+                  </label>
+                  <label class="flex items-center" data-id="phone-preference">
+                    <input type="radio" 
+                           name="contactMethod" 
+                           value="phone" 
+                           class="text-primary focus:ring-primary border-gray-300"
+                           data-id="phone-radio">
+                    <span class="ml-2 text-gray-700">Phone</span>
+                  </label>
+                  <label class="flex items-center" data-id="both-preference">
+                    <input type="radio" 
+                           name="contactMethod" 
+                           value="both" 
+                           class="text-primary focus:ring-primary border-gray-300"
+                           data-id="both-radio">
+                    <span class="ml-2 text-gray-700">Both</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Newsletter Signup -->
+              <div class="flex items-center" data-id="newsletter-field">
+                <input type="checkbox" 
+                       id="newsletter" 
+                       name="newsletter" 
+                       class="text-primary focus:ring-primary border-gray-300 rounded"
+                       data-id="newsletter-checkbox">
+                <label for="newsletter" class="ml-2 text-sm text-gray-700" data-id="newsletter-label">
+                  Subscribe to our newsletter for market updates and new listings
+                </label>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" 
+                      class="w-full bg-primary text-white py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center gap-2"
+                      data-id="submit-button">
+                <i data-lucide="send" class="w-5 h-5"></i>
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section (Placeholder) -->
+  <section class="py-16 bg-gray-100" data-id="map-section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-8" data-id="map-header">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4" data-id="map-title">Visit Our Office</h2>
+        <p class="text-lg text-gray-600" data-id="map-subtitle">
+          Come see us in person for a personalized consultation
+        </p>
+      </div>
+      
+      <!-- Map Placeholder -->
+      <div class="bg-gray-300 h-96 rounded-xl flex items-center justify-center" data-id="map-placeholder">
+        <div class="text-center" data-id="map-content">
+          <i data-lucide="map-pin" class="w-12 h-12 text-gray-500 mx-auto mb-4"></i>
+          <p class="text-gray-600 text-lg" data-id="map-text">Interactive Map Coming Soon</p>
+          <p class="text-gray-500" data-id="map-address">123 Real Estate Ave, City, ST 12345</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container" data-source="components/footer.html"></div>
+
+  <!-- Badge -->
+  <div id="badge-container" data-source="components/badge.html"></div>
+
+  <!-- Success/Error Messages -->
+  <div id="message-overlay" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden" data-id="message-overlay">
+    <div class="bg-white p-8 rounded-xl shadow-xl max-w-md w-full mx-4" data-id="message-modal">
+      <div class="text-center" data-id="message-content">
+        <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full" data-id="message-icon-container">
+          <i class="w-8 h-8" data-id="message-icon"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-2" data-id="message-title"></h3>
+        <p class="text-gray-600 mb-6" data-id="message-text"></p>
+        <button class="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors" data-id="message-close">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { loadComponent } from './scripts/components/loader.js';
+    
+    // Load all shared components
+    loadComponent('#navbar-container');
+    loadComponent('#footer-container');
+    loadComponent('#badge-container');
+    
+    // Initialize icons after components are loaded
+    setTimeout(() => {
+      lucide.createIcons();
+    }, 100);
+  </script>
+
+  <script type="module" src="scripts/contact.js"></script>
+</body>
+</html>
